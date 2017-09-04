@@ -1,0 +1,13 @@
+{
+  "name": "wooyellowcube-docs",
+  "version": "1.0.0",
+  "description": "Official documentation of the WooCommerce YellowCube plugin.",
+  "author": "Janez Urevc <janez.urevc@md-systems.ch>",
+  "bugs": {
+    "url": "https://gitlab.com/swisspost-yellowcube/wooyellowcube-docs/issues"
+  },
+  "homepage": "https://gitlab.com/swisspost-yellowcube/wooyellowcube-docs#README",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
