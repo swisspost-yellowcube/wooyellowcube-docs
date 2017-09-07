@@ -7,7 +7,7 @@ The fields below **Personal informations **need to be filled out with the inform
 The fields below **Technical information **need to be setup.
 
 * "SOAP url": Note that test environment and productional environment have different links
-* "Operating mode": Choose between _Testing _and _Production_
+* "Operating mode": Choose between _Testing and Production_
 * "Authentification": Needs to be set on Yes if you use the Soap url with_ -int_ or the productional environment
 * "Authentification file":
 
