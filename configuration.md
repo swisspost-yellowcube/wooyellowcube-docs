@@ -4,25 +4,18 @@
 
 The fields below **Personal informations **need to be filled out with the information you have received by the YellowCube customer service. The field "Sender" is case sensitive.
 
-![](/assets/Download.png)
+The fields below **Technical information **need to be setup.
 
-![](/assets/Download.png)
+* "SOAP url": Note that test environment and productional environment have different links
+* "Operating mode": Choose between _Testing _and _Production_
+* "Authentification": Needs to be set on _Yes _if you use the Soap url with _-int _or the productional environment
+* "Authentification file":
 
-![](/assets/Download.png)
+If you are planning to send out batch products enable the feature in **Lot management.**
 
-![](/assets/Download.png)
+Define how many days logs will be kept in the database in the **Logs **section. We suggest you start with 30 days and then reduce it after you have more experience.
 
-## ![](/assets/Download.png)
-
-## 
-
-## 
-
-## 
-
-## 
-
-
+![](/assets/Informations.png)
 
 
 
