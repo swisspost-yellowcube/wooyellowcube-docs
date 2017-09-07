@@ -17,3 +17,9 @@ Define how many days logs will be kept in the database in the **Logs **section. 
 
 ![](/assets/Informations.png)
 
+## Shipping
+
+Setup shipping according your business logic.
+
+
+
