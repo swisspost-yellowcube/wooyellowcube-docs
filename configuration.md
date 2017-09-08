@@ -31,13 +31,13 @@ You will find more detailed information about basic and additional shipping serv
 
 Check the **activity log** to see the activity on your website. A log message is automatically created when errors occur, stock inventory is updated etc. You will also find the tracking numbers if a _WAR_ was processed.
 
-![](/assets/Activity Log.png)
+![](/assets/Activity_Log.png)
 
 ## Stock management
 
 In the **WooYellowCube stock management** you will find information about your products. For each _Product name \(SKU\)_ you can check how many items are available in the YellowCube stock.
 
-![](/assets/Stock management top.png)
+![](/assets/Stock_management_top.png)
 
 Here you also can take action for selected products:
 
@@ -45,5 +45,5 @@ Here you also can take action for selected products:
 * "Update WooCommerce Stock with YellowCube": Update the stock in WooCommerce so the website and the stock in YellowCube are in sync.
 * "Force to refresh memory": @todo
 
-![](/assets/Stock management.png)
+![](/assets/Stock_management.png)
 
