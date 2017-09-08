@@ -35,7 +35,7 @@ Check the **activity log** to see the activity on your website. A log message is
 
 ## Stock management
 
-In the **WooYellowCube stock management** you will find information about your products. For each _Product name \(SKU\)_ you can check how many items are available in the YellowCube stock. 
+In the **WooYellowCube stock management** you will find information about your products. For each _Product name \(SKU\)_ you can check how many items are available in the YellowCube stock.
 
 ![](/assets/Stock management top.png)
 
@@ -46,8 +46,4 @@ Here you also can take action for selected products:
 * "Force to refresh memory": @todo
 
 ![](/assets/Stock management.png)
-
-
-
-
 
