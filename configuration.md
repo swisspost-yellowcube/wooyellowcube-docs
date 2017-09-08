@@ -8,8 +8,10 @@ The fields below **Technical information **need to be setup.
 
 * "SOAP url": Note that test environment and productional environment have different links
 * "Operating mode": Choose between _Testing and Production_
-* "Authentification": Needs to be set on Yes if you use the Soap url with_ -int_ or the productional environment
-* "Authentification file":
+  * In Testing mode orders are processed virtually. Documents, labels etc. are printed out and scanned. This mode is for testing purposes
+  * Production mode needs to be set when the website is live and working
+* "Authentification": Needs to be set to _Yes_ if you use the Soap url with_ -int_ or the productional environment
+* "Authentification file": Can be ignored
 
 If you are planning to send out batch products enable the feature in **Lot management.**
 
