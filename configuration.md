@@ -23,5 +23,11 @@ Define how many days logs will be kept in the database in the **Logs **section. 
 
 Setup shipping according your business logic.
 
+You will find more detailed information about basic and additional shipping services in the YellowCube Interface Manual.
+
+![](/assets/Shipping.png)
+
+## Activity Log
+
 
 
