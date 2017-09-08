@@ -29,5 +29,9 @@ You will find more detailed information about basic and additional shipping serv
 
 ## Activity Log
 
+Check the activity log to see the activity on your website. A log message is automatically created when errors occur, stock inventory is updated etc. You will also find the tracking numbers if a _WAR_ was processed.
+
+![](/assets/Activity Log.png)
+
 
 
