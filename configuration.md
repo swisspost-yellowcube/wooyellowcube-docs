@@ -11,7 +11,7 @@ The fields below **Technical information **need to be setup.
   * In Testing mode orders are processed virtually. Documents, labels etc. are printed out and scanned. This mode is for testing purposes
   * Production mode needs to be set when the website is live and working
 * "Authentification": Needs to be set to _Yes_ if you use the Soap url with_ -int_ or the productional environment
-* "Authentification file": Can be ignored
+* "Authentification file": @todo
 
 If you are planning to send out batch products enable the feature in **Lot management.**
 
@@ -29,9 +29,25 @@ You will find more detailed information about basic and additional shipping serv
 
 ## Activity Log
 
-Check the activity log to see the activity on your website. A log message is automatically created when errors occur, stock inventory is updated etc. You will also find the tracking numbers if a _WAR_ was processed.
+Check the **activity log** to see the activity on your website. A log message is automatically created when errors occur, stock inventory is updated etc. You will also find the tracking numbers if a _WAR_ was processed.
 
 ![](/assets/Activity Log.png)
+
+## Stock management
+
+In the **WooYellowCube stock management** you will find information about your products. For each _Product name \(SKU\)_ you can check how many items are available in the YellowCube stock. 
+
+![](/assets/Stock management top.png)
+
+Here you also can take action for selected products:
+
+* "Send ART profile": @todo
+* "Update WooCommerce Stock with YellowCube": Update the stock in WooCommerce so the website and the stock in YellowCube are in sync.
+* "Force to refresh memory": @todo
+
+![](/assets/Stock management.png)
+
+
 
 
 
