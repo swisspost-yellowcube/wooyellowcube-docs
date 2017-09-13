@@ -1,6 +1,7 @@
 # Introduction
 
-This manual will support you with setting up YellowCube plugin on your WooCommerce store. Only YellowCube
+This manual will support you with setting up [YellowCube](https://www.post.ch/de/geschaeftlich/themen-a-z/sendung-aufgeben/pakete-aufgeben-geschaeftlich/yellowcube) plugin on
+your WooCommerce store. Only YellowCube
 specific topics are covered in this document. In order to efficiently set up the website you should
 be familiar with Wordpress and WooCommerce. If that is not the case we strongly suggest you study the
 [Wordpress](https://codex.wordpress.org/Main_Page) and [WooCommerce](https://docs.woocommerce.com/documentation/plugins/woocommerce/)
