@@ -26,11 +26,16 @@ Define how many days logs will be kept in the database in the **Logs** section. 
 
 ## Shipping
 
-Setup shipping according your business logic.
+YellowCube relies on [shipping zones](https://docs.woocommerce.com/document/setting-up-shipping-zones/) so you should configure them according to your business logic first. If unsure how to do that check the [relevant section of the WooCommerce documentation pages](https://docs.woocommerce.com/document/setting-up-shipping-zones/).
 
-You will find more detailed information about basic and additional shipping services in the YellowCube Interface Manual.
+Once you have configured shipping zones and added the desired shipping methods to them you will be able to configure YellowCube specific configuration
+for each of them. You will be able to do that on the configuration page that can be found by navigating to *WooYellowCube -> Shipping*:
 
 ![](/assets/Shipping.png)
+
+The page lists all shipping methods (grouped by zones) and allows you to configure YellowCube for each of them separately. YellowCube can be enabled by selecting *Activated* in the *Status* dropdown for the relevant shipping zone/method.
+
+The other two dropdowns (*BasicShippingServices* and *AdditionalShippingServices*) allow you to select the YellowCube product that should be used.  You will find more detailed information about those in the YellowCube Interface Manual.
 
 ## Activity Log
 
@@ -51,7 +56,7 @@ Here you also can take action for selected products:
   update so it should only be used if something went wrong.
 * *Update WooCommerce Stock with YellowCube*: Stock information in WooCommerce will sometimes diverge from the one reported by YellowCube for various reasons. If you are sure that
   the stock information provided by the latter is correct you can use this action to override the information WooCommerce has about the selected products.
-* *Force to refresh inventory*: This will do the same as the previous option, but it will update all the products in the system not just the manually selected ones.
+* *Force to refresh inventory*: This will have the same
 
 ![](/assets/Stock_management.png)
 
