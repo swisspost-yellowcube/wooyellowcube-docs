@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - stable
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "df68496685d7"
+  - COMMIT_AUTHOR_EMAIL: ci@md-systems.ch
+
+script: bash ./deploy.sh
