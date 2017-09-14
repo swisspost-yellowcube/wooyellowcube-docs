@@ -1,3 +1,4 @@
 #!/bin/bash
 
-./node_modules/gitbook-cli/bin/gitbook.js build ./ out
+./node_modules/gitbook-cli/bin/gitbook.js build
+cp -r _build/* out/*
