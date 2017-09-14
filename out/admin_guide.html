@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="products_admin.html" />
+    
     
     <link rel="prev" href="configuration.html" />
     
@@ -150,6 +152,38 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="products_admin.html">
+            
+                <a href="products_admin.html">
+            
+                    
+                    Products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="orders_admin.html">
+            
+                <a href="orders_admin.html">
+            
+                    
+                    Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
 
@@ -197,88 +231,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="store-administration">Store administration</h1>
-<h2 id="orders">Orders</h2>
-<p>Find detailed information in the WooCommerce &gt; Orders section.</p>
-<h3 id="overview">Overview</h3>
-<p>Here you see all orders in a list. You have multiple filter and sorting options.</p>
-<p><strong>Screen Options</strong>: Set the columns  you want to have displayed.</p>
-<p><img src="assets/Orders_Screen_Options.png" alt=""></p>
-<p><strong>Help</strong>: In the help section you will find more detailed information about WooCommerce in general without YellowCube specific information.</p>
-<p><strong>Filter by</strong>:</p>
-<ul>
-<li>All orders / Completed orders</li>
-<li>All dates / specific months</li>
-<li>Customers</li>
-</ul>
-<p><strong>Order by</strong>:</p>
-<ul>
-<li>Order Number</li>
-<li>Date</li>
-<li>Total Price</li>
-</ul>
-<p>You also can process <strong>bulk operations</strong> if you need to update orders manually. Generally the status of an order is updated automatically:</p>
-<p>Select the order(s) you want to update, then choose the <em>Bulk action</em> you want to take and hit the <em>Apply</em> button.</p>
-<ul>
-<li>Move order(s) to the trash<ul>
-<li>If an order has been cancelled</li>
-</ul>
-</li>
-<li>Mark order(s) that is <em>processing</em><ul>
-<li>If an order has been sent to YellowCube and the shipping process at YellowCube has been started.</li>
-</ul>
-</li>
-<li>Mark order(s) as <em>on hold</em><ul>
-<li>If an order has been created in WooCommerce but not sent to YellowCube yet.</li>
-</ul>
-</li>
-<li>Mark order(s) as <em>completed</em><ul>
-<li>If an order has been sent out from YellowCube and now is on its way to the client.</li>
-</ul>
-</li>
-</ul>
-<p><img src="assets/Orders.png" alt=""></p>
-<p>Click on the <em>eye button</em> for a <strong>detail view</strong> of an order.</p>
-<h3 id="detail">Detail</h3>
-<p>Here you see more detailed information for an order and several update options.</p>
-<p><strong>Add order</strong></p>
-<p>@todo</p>
-<p><strong>General Details</strong></p>
-<p>As Administrator you can manually change D<em>ate and Time, Status, Billing and Shipping address</em> of the order.</p>
-<p>You also can change the customer manually.</p>
-<p><strong>Order Actions</strong></p>
-<p>Here you can execute several actions for an order:</p>
-<ul>
-<li>Resend New order</li>
-<li>Resend Cancelled order</li>
-<li>Resend Processing order</li>
-<li>Resend Completed order</li>
-<li>Resend Customer invoice</li>
-<li>Regenerate download permissions</li>
-<li>Move to trash</li>
-</ul>
-<p><strong>Order notes</strong></p>
-<p>You also can add notes to the order:</p>
-<ul>
-<li>Private note<ul>
-<li>Only visible for Administrators in the backend</li>
-</ul>
-</li>
-<li>Note to a customer<ul>
-<li>Will be sent to the client</li>
-</ul>
-</li>
-</ul>
-<p><img src="assets/Detailed_order_top.png" alt=""></p>
-<p><strong>Items</strong></p>
-<p>Here you can change the delete single items of an order and increase or reduce their stock by clicking on the item.<img src="assets/Detailed_order_Items.png" alt=""></p>
-<p><strong>Custom Fields</strong></p>
-<p>@todo</p>
-<p><strong>Downloadable product permissions</strong></p>
-<p>Search for a downloadable product and grant access to it.</p>
-<p><img src="assets/Detailed_order_Custom.png" alt=""></p>
-<p><strong>YellowCube Manage WAB (order)</strong></p>
-<p>You can manually send the order to YellowCube here.<img src="assets/Detailed_order_YC.png" alt=""></p>
+                                <h1 id="store-administration-guide">Store administration guide</h1>
+<p>This section covers most important information related to the management of the
+WooCommerce store. This includes product and order creation and management.</p>
+<p>YellowCube is just a tiny part of the entire process. We suggest store admins
+to study the official WooCommerce documentation that covers
+<a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/setup-products/" target="_blank">product</a>
+and <a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/managing-orders/" target="_blank">order</a> management.</p>
 
                                 
                                 </section>
@@ -306,10 +265,14 @@
 
             
                 
-                <a href="configuration.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Configuration">
+                <a href="configuration.html" class="navigation navigation-prev " aria-label="Previous page: Configuration">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="products_admin.html" class="navigation navigation-next " aria-label="Next page: Products">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -318,7 +281,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Store admin guide","level":"1.5","depth":1,"previous":{"title":"Configuration","level":"1.4","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"admin_guide.md","mtime":"2017-09-12T12:50:21.552Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-13T14:09:17.410Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Store admin guide","level":"1.5","depth":1,"next":{"title":"Products","level":"1.5.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"previous":{"title":"Configuration","level":"1.4","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"admin_guide.md","mtime":"2017-09-14T11:41:45.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-14T11:42:32.954Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

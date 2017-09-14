@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Order · GitBook</title>
+        <title>Products · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="orders_admin.html" />
     
-    <link rel="prev" href="products_admin.html" />
+    
+    <link rel="prev" href="admin_guide.html" />
     
 
     </head>
@@ -153,7 +155,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="products_admin.html">
+        <li class="chapter active" data-level="1.5.1" data-path="products_admin.html">
             
                 <a href="products_admin.html">
             
@@ -166,7 +168,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2" data-path="orders_admin.html">
+        <li class="chapter " data-level="1.5.2" data-path="orders_admin.html">
             
                 <a href="orders_admin.html">
             
@@ -214,7 +216,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Order</a>
+        <a href="." >Products</a>
     </h1>
 </div>
 
@@ -229,34 +231,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="order-management">Order management</h2>
-<p>When relevant orders are created they will be sent to YellowCube as soon as they have been payed. If
-the customer used a payment method that requires manual intervention this will be triggered once admin
-has changes the status of the order to &quot;<em>Processing</em>&quot;.</p>
-<p>The statuses of the orders can be seen on the order listing page:</p>
-<p><img src="assets/order_list.png" alt=""></p>
+                                <h2 id="product-management">Product management</h2>
+<p>Information about the product will be sent to YellowCube upon creation. In order for this to be successful
+you need to make sure that all the required information is populated:</p>
+<ul>
+<li><em>SKU</em>: required field, YellowCube won&apos;t be able to process your orders if you skip it. You will find it
+under <em>Product data -&gt; Inventory</em>.</li>
+</ul>
+<p><img src="assets/product_sku.png" alt=""></p>
+<ul>
+<li><p><em>Weight</em>: required field, YellowCube won&apos;t be able to process your orders if you skip it You will find it
+under <em>Product data -&gt; Shipping</em>.</p>
+</li>
+<li><p><em>Dimensions</em>: Not strictly required. However, it is recommended to provide this information.</p>
+</li>
+</ul>
+<p><img src="assets/product_size.png" alt=""></p>
+<p>Immediately after the product has been created and published its information will be sent to YellowCube. The status
+of the product can be seen in the general product listing:</p>
+<p><img src="assets/product_list.png" alt=""></p>
 <p>The possible values in the YellowCube column are:</p>
 <ul>
-<li><em>Order not sent to YellowCube</em>: Order has not been sent to YellowCube at all. This could mean that this specific
-order shouldn&apos;t be processed by YellowCube (sent to a shipping zone that is not handled by YellowCube) or that
-there are still conditions to be met to do so (usually awaiting payment).</li>
-<li><em>Waiting YellowCube response</em>: Order has been sent to YellowCube but it hasn&apos;t been processed on their side yet.</li>
-<li><em>Order sent by YellowCube</em>: Order was dispatched from the YellowCube facility and the product is on its way to
-the customer. Tracking code is provided in the logs if applicable.</li>
-<li><em>Invalid order</em>: A problem occured wile trying to process the order on the YellowCube side. Check the logs on the
-order edit page for more info.</li>
+<li><em>Product sent to YellowCube</em>: Product info was sent to YellowCube, but we didn&apos;t get any reply yet. Product is not
+considered conntected to YellowCube yet.</li>
+<li><em>Received</em>: YellowCube confirmed that it received and processed the product information. Everything seems to be OK.</li>
+<li><em>Waiting response</em>: An update was sent to YellowCube and we are waiting for confirmation. Product is already connected
+with YellowCube.</li>
+<li><em>Invalid ART</em>: YellowCube was unable to process the product information. Check the log on the product edit page to
+learn more.</li>
 </ul>
-<p>Detailed information about YellowCube communication about the order is available at the bottom of the order edit page.</p>
-<p><img src="assets/order_info.png" alt=""></p>
-<p>The status of the order and the tracking information (if available) are displayed on the left.</p>
-<p>Log of all the communication about the order can be seen in the right column. If there were any problems you will be able
+<p>Detailed information about YellowCube communication about the product is available at the bottom of the product edit page.</p>
+<p><img src="assets/product_edit.png" alt=""></p>
+<p>Log of all the communication about the product can be seen in the right column. If there were any problems you will be able
 to see the error messages here.</p>
-<h3 id="returns">Returns</h3>
-<p>Please note that the WooYellowCube currently doen&apos;t handle order returns automatically. If a return happens the payment
-refund and any other relevant steps need to be made manually by the store administrator.</p>
-<h3 id="backed-order-creation">Backed order creation</h3>
-<p>Backend order creation is currently not supported and such orders won&apos;t be processed by the YellowCube. If a store admin
-needs to create an order on behalf of the customer it needs to be done through the public store interface.</p>
+<p>In the left column we can see the general status of the product (similar to the status info in the product listing), we can
+activate LOT management, force re-sending of the product information and remove the product from YellowCube entirely.</p>
+<p>You can&apos;t deactivate LOT management once it has been enabled. Before doing so you need to consider all implications of such
+action. If you are unsure about that please contact Swiss Post support for more information.</p>
 
                                 
                                 </section>
@@ -284,10 +295,14 @@ needs to create an order on behalf of the customer it needs to be done through t
 
             
                 
-                <a href="products_admin.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Products">
+                <a href="admin_guide.html" class="navigation navigation-prev " aria-label="Previous page: Store admin guide">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="orders_admin.html" class="navigation navigation-next " aria-label="Next page: Order">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -296,7 +311,7 @@ needs to create an order on behalf of the customer it needs to be done through t
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Order","level":"1.5.2","depth":2,"previous":{"title":"Products","level":"1.5.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"orders_admin.md","mtime":"2017-09-14T11:44:38.615Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-14T11:45:34.054Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Products","level":"1.5.1","depth":2,"next":{"title":"Order","level":"1.5.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},"previous":{"title":"Store admin guide","level":"1.5","depth":1,"path":"admin_guide.md","ref":"admin_guide.md","articles":[{"title":"Products","level":"1.5.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},{"title":"Order","level":"1.5.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"products_admin.md","mtime":"2017-09-14T11:41:45.083Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-14T11:42:32.954Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
