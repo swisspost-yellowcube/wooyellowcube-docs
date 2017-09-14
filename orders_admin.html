@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Store admin guide · GitBook</title>
+        <title>Order · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="products_admin.html" />
     
-    
-    <link rel="prev" href="configuration.html" />
+    <link rel="prev" href="products_admin.html" />
     
 
     </head>
@@ -141,7 +139,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="admin_guide.html">
+        <li class="chapter " data-level="1.5" data-path="admin_guide.html">
             
                 <a href="admin_guide.html">
             
@@ -168,7 +166,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="orders_admin.html">
+        <li class="chapter active" data-level="1.5.2" data-path="orders_admin.html">
             
                 <a href="orders_admin.html">
             
@@ -216,7 +214,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Store admin guide</a>
+        <a href="." >Order</a>
     </h1>
 </div>
 
@@ -231,13 +229,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="store-administration-guide">Store administration guide</h1>
-<p>This section covers most important information related to the management of the
-WooCommerce store. This includes product and order creation and management.</p>
-<p>YellowCube is just a tiny part of the entire process. We suggest store admins
-to study the official WooCommerce documentation that covers
-<a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/setup-products/" target="_blank">product</a>
-and <a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/managing-orders/" target="_blank">order</a> management.</p>
+                                <h2 id="order-management">Order management</h2>
+<p>When relevant orders are created they will be sent to YellowCube as soon as they have been payed. If
+the customer used a payment method that requires manual intervention this will be triggered once admin
+has changes the status of the order to &quot;<em>Processing</em>&quot;.</p>
+<p>The statuses of the orders can be seen on the order listing page:</p>
+<p><img src="assets/order_list.png" alt=""></p>
+<p>The possible values in the YellowCube column are:</p>
+<ul>
+<li><em>Order not sent to YellowCube</em>: Order has not been sent to YellowCube at all. This could mean that this specific
+order shouldn&apos;t be processed by YellowCube (sent to a shipping zone that is not handled by YellowCube) or that
+there are still conditions to be met to do so (usually awaiting payment).</li>
+<li><em>Waiting YellowCube response</em>: Order has been sent to YellowCube but it hasn&apos;t been processed on their side yet.</li>
+<li><em>Order sent by YellowCube</em>: Order was dispatched from the YellowCube facility and the product is on its way to
+the customer. Tracking code is provided in the logs if applicable.</li>
+<li><em>Invalid order</em>: A problem occured wile trying to process the order on the YellowCube side. Check the logs on the
+order edit page for more info.</li>
+</ul>
+<p>Detailed information about YellowCube communication about the order is available at the bottom of the order edit page.</p>
+<p><img src="assets/order_info.png" alt=""></p>
+<p>The status of the order and the tracking information (if available) are displayed on the left.</p>
+<p>Log of all the communication about the order can be seen in the right column. If there were any problems you will be able
+to see the error messages here.</p>
+<h3 id="returns">Returns</h3>
+<p>Please note that the WooYellowCube currently doen&apos;t handle order returns automatically. If a return happens the payment
+refund and any other relevant steps need to be made manually by the store administrator.</p>
+<h3 id="backed-order-creation">Backed order creation</h3>
+<p>Backend order creation is currently not supported and such orders won&apos;t be processed by the YellowCube. If a store admin
+needs to create an order on behalf of the customer it needs to be done through the public store interface.</p>
 
                                 
                                 </section>
@@ -265,14 +284,10 @@ and <a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/gett
 
             
                 
-                <a href="configuration.html" class="navigation navigation-prev " aria-label="Previous page: Configuration">
+                <a href="products_admin.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Products">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="products_admin.html" class="navigation navigation-next " aria-label="Next page: Products">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -281,7 +296,7 @@ and <a href="https://docs.woocommerce.com/documentation/plugins/woocommerce/gett
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Store admin guide","level":"1.5","depth":1,"next":{"title":"Products","level":"1.5.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"previous":{"title":"Configuration","level":"1.4","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"admin_guide.md","mtime":"2017-09-14T11:41:45.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-14T11:42:32.954Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Order","level":"1.5.2","depth":2,"previous":{"title":"Products","level":"1.5.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"orders_admin.md","mtime":"2017-09-14T11:41:45.083Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-14T11:42:32.954Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
