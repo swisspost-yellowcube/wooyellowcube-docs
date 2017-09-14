@@ -9,6 +9,7 @@
   "homepage": "https://gitlab.com/swisspost-yellowcube/wooyellowcube-docs#README",
   "dependencies": {
     "ebook-convert": "^2.0.1",
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "node-calibre": "^1.1.0"
   }
 }
