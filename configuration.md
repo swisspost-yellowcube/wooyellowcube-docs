@@ -28,8 +28,7 @@ Define how many days logs will be kept in the database in the **Logs** section. 
 
 YellowCube relies on [shipping zones](https://docs.woocommerce.com/document/setting-up-shipping-zones/) so you should configure them according to your business logic first. If unsure how to do that check the [relevant section of the WooCommerce documentation pages](https://docs.woocommerce.com/document/setting-up-shipping-zones/).
 
-Once you have configured shipping zones and added the desired shipping methods to them you will be able to configure YellowCube specific configuration  
-for each of them. You will be able to do that on the configuration page that can be found by navigating to _WooYellowCube -&gt; Shipping_:
+Once you have configured shipping zones and added the desired shipping methods to them you will be able to configure YellowCube specific configuration for each of them. You will be able to do that on the configuration page that can be found by navigating to _WooYellowCube -&gt; Shipping_:
 
 ![](/assets/Shipping.png)
 
@@ -52,7 +51,7 @@ In the **WooYellowCube stock management** you will find information about your p
 * _Update WooCommerce Stock with YellowCube_:
   Stock information in WooCommerce will sometimes diverge from the one reported by YellowCube for various reasons. If you are sure that the stock information provided by the latter is correct you can use this action to override the information WooCommerce has about the selected products.
 * _Force to refresh inventory_
-  This will have the same @todo
+  This will have the same effect as _Update WooCommerce Stock with YellowCube _but it will apply to all products and not just the ones that you manually selected.
 
 ![](/assets/Stock_management.png)
 
