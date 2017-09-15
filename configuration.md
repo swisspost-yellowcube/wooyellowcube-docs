@@ -39,10 +39,7 @@ The other two dropdowns \(_BasicShippingServices_ and _AdditionalShippingService
 
 ## Activity Log
 
-Check the **activity log** to see the activity on your website. A log message is automatically created when errors occur, stock inventory is updated etc. You will also find the tracking numbers for  
-orders that were already processed and shipped.
-
-![](/assets/Activity_Log.png)
+Check the [**activity log**](/activity-log.md) to see the activity on your website.
 
 ## Stock management
 
