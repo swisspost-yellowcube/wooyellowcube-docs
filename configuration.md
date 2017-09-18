@@ -22,6 +22,8 @@ Enable **Lot management** if you are planning to send out batch products.
 
 Define how many days logs will be kept in the database in the **Logs** section. We suggest you start with 30 days and then reduce it if the amount of log items becomes an issue.
 
+Note that you need to provide the IP address of your WooCommerce Shop to YellowCube for giving your shop access to YellowCube. This can also affect the configuration for any staging/development envirnoments. Consult your dedicated service provider for more informations about that.
+
 ![](/assets/Informations.png)
 
 ## Shipping
@@ -51,7 +53,7 @@ In the **WooYellowCube stock management** you will find information about your p
 * _Update WooCommerce Stock with YellowCube_:
   Stock information in WooCommerce will sometimes diverge from the one reported by YellowCube for various reasons. If you are sure that the stock information provided by the latter is correct you can use this action to override the information WooCommerce has about the selected products.
 * _Force to refresh inventory_
-  This will have the same effect as _Update WooCommerce Stock with YellowCube _but it will apply to all products and not just the ones that you manually selected.
+  This will have the same effect as \_Update WooCommerce Stock with YellowCube \_but it will apply to all products and not just the ones that you manually selected.
 
 ![](/assets/Stock_management.png)
 
