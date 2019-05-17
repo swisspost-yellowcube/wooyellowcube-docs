@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63bcc8b6-c26c-4be2-8ccb-33f343356096" name="Default Changelist" comment="" />
+    <list default="true" id="63bcc8b6-c26c-4be2-8ccb-33f343356096" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +20,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="376" />
-    <option name="y" value="122" />
+    <option name="y" value="158" />
     <option name="width" value="1410" />
     <option name="height" value="812" />
   </component>
@@ -71,7 +73,7 @@
     <option name="totallyTimeSpent" value="782000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="376" y="122" width="1410" height="812" extended-state="0" />
+    <frame x="376" y="158" width="1410" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
