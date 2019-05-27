@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63bcc8b6-c26c-4be2-8ccb-33f343356096" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="63bcc8b6-c26c-4be2-8ccb-33f343356096" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="376" />
-    <option name="y" value="158" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="417" />
+    <option name="y" value="120" />
     <option name="width" value="1410" />
     <option name="height" value="812" />
   </component>
@@ -65,16 +63,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557999333291</updated>
-      <workItem from="1557999334436" duration="782000" />
+      <workItem from="1557999334436" duration="1391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="782000" />
+    <option name="totallyTimeSpent" value="1391000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="376" y="158" width="1410" height="812" extended-state="0" />
-    <editor active="true" />
+    <frame x="417" y="120" width="1410" height="812" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
