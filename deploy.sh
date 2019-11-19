@@ -44,6 +44,9 @@ ssh-add deploy_key
 
 # Now let's go have some fun with the cloned repo
 cd out
+# Caution gitbook adds the keys to the output folder. Remove them!
+rm deploy_key deploy_key.enc *.sh package*.json
+
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 
