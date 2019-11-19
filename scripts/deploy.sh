@@ -5,13 +5,13 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
-  ./compile.sh
+  ./scripts/compile.sh
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
     echo "Skipping deploy; will only do it on master branch."
-    exit 0
+    #exit 0
 fi
 
 # Save some useful information
@@ -38,14 +38,14 @@ doCompile
 # ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 # ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 # openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in deploy_key.enc -out deploy_key -d
-chmod 600 deploy_key
+chmod 600 scripts/deploy_key
 eval `ssh-agent -s`
-ssh-add deploy_key
+ssh-add scripts/deploy_key
 
 # Now let's go have some fun with the cloned repo
 cd out
-# Caution gitbook adds the keys to the output folder. Remove them!
-rm deploy_key deploy_key.enc *.sh package*.json
+# Caution gitbook clones the source folder. Remove scripts and keys inside.
+rm -r scripts package*.json
 
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
