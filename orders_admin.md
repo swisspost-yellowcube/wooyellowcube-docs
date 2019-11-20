@@ -5,7 +5,7 @@ An order is relevant for YellowCube if the determined shipping zone is enabled f
 When relevant orders are created they will be sent to YellowCube as soon as they reach the *Processing* status.
 
 A well integrated online payment method (e.g. credit cards) will update the status either immediately or with a short delay after clearance (based on a callback).  
-If the customer used a payment method that requires manual intervention the store admin will need to change the status of the order to *Processing* manually.
+If the selected payment method requires manual intervention, the order remains in status *On hold* until the store admin changes it to *Processing* manually upon payment.
 
 ### Order list
 The status of each orders can be seen on the order listing page:
@@ -41,9 +41,10 @@ Any order submission will reserve its articles and deduct each articles stock co
 ### Proper order cancellation
 
 An order can stay stuck in status *Pending payment* or maybe *Failed* if a customer cancels on the payment page.
-Manual payment methods typically stay  *On hold*.
+Customers choosing manual payment methods in status *On hold* might change their mind about the order.
+See also the official [status definition](https://docs.woocommerce.com/document/managing-orders/).
 
-In order to free the reserved stock, WooCommerce requires a store admin to put the order to status *Cancelled*.
+In order to free the reserved stock on cancellation, WooCommerce requires a store admin to put the order to status *Cancelled*.
 
 Permanently deleting an order with reserved stock via trash will not restore the stock counter. This is a WooCommerce limitation.
 
