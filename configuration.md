@@ -18,8 +18,6 @@ The fields below **Technical information** need to be setup.
 * _Authentification file_: If the certificate authentication is used provide path to the certificate file on the
   server in this field \(relative to the folder of the WooYellowCube extension\).
 
-Enable **Lot management** if you are planning to send out expiring products.
-
 Define how many days logs will be kept in the database in the **Logs** section. We suggest you start with 30 days and then reduce it if the amount of log items becomes an issue.
 
 Note that you need to provide the IP address of your WooCommerce Shop to YellowCube for giving your shop access to YellowCube. This can also affect the configuration for any staging/development envirnoments. Consult your dedicated service provider for more informations about that.
