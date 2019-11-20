@@ -271,6 +271,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="order-management">Order management</h2>
+<p>An order is relevant for YellowCube if the determined shipping zone is enabled for YellowCube.</p>
 <p>When relevant orders are created they will be sent to YellowCube as soon as they reach the <em>Processing</em> status.</p>
 <p>A well integrated online payment method (e.g. credit cards) will update the status either immediately or with a short delay after clearance (based on a callback).<br>If the customer used a payment method that requires manual intervention the store admin will need to change the status of the order to <em>Processing</em> manually.</p>
 <h3 id="order-list">Order list</h3>
@@ -310,6 +311,9 @@ refund and any other relevant steps need to be made manually by the operator.</p
 <h3 id="backed-order-creation">Backed order creation</h3>
 <p>Backend order creation is currently not supported and such orders won&apos;t be processed by the YellowCube. If a store admin
 needs to create an order on behalf of the customer it needs to be done through the public store interface.</p>
+<h3 id="advanced-manual-order-submission">Advanced: Manual order submission</h3>
+<p>Some store admins like to determine on a per order basis if they handle it on their own or pass it to YellowCube.
+If YellowCube is disabled for a matched shipping zone, a store admin can still manually force submit it.</p>
 
                                 
                                 </section>
@@ -353,7 +357,7 @@ needs to create an order on behalf of the customer it needs to be done through t
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Order","level":"1.7.2","depth":2,"next":{"title":"Activity Log","level":"1.7.3","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]},"previous":{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"orders_admin.md","mtime":"2019-11-20T23:18:28.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T23:19:40.354Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Order","level":"1.7.2","depth":2,"next":{"title":"Activity Log","level":"1.7.3","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]},"previous":{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"orders_admin.md","mtime":"2019-11-20T23:36:49.315Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T23:38:35.217Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
