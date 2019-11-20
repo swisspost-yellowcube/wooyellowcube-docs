@@ -1,5 +1,7 @@
 ## Order management
 
+An order is relevant for YellowCube if the determined shipping zone is enabled for YellowCube.
+
 When relevant orders are created they will be sent to YellowCube as soon as they reach the *Processing* status.
 
 A well integrated online payment method (e.g. credit cards) will update the status either immediately or with a short delay after clearance (based on a callback).  
@@ -64,3 +66,8 @@ refund and any other relevant steps need to be made manually by the operator.
 
 Backend order creation is currently not supported and such orders won't be processed by the YellowCube. If a store admin
 needs to create an order on behalf of the customer it needs to be done through the public store interface.
+
+### Advanced: Manual order submission
+
+Some store admins like to determine on a per order basis if they handle it on their own or pass it to YellowCube.
+If YellowCube is disabled for a matched shipping zone, a store admin can still manually force submit it.
