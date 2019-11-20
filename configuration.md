@@ -25,19 +25,21 @@ Note that you need to provide the IP address of your WooCommerce Shop to YellowC
 ![](/assets/Informations_testing_v2.png)
 
 Every time you save the settings form all states and caches are cleared. Background processes will re-run with the
-next trigger. This reduces issues when switching between Testing / Production and different accounts.
+next trigger. This reduces issues when switching between Testing / Production and different accounts. However product registration states remain stale.
 
 Limitation: Do NOT connect multiple shop instances to the same YellowCube account as WAR request (hourly cron
 containing confirming shippings with track & trace) can not be shared.
 
 ## Production go live
 
-Once you are ready for production use, change the settings accordingly:
+Once you are ready for production use, change the operating mode settings accordingly:
 
 ![](/assets/Informations_production_v2_crop.png)
 
 Note that all previously registered articles need to be sent again to registration in production.
 There is no bulk operation yet to automate this process.
+
+Limitation: If a previously successfully submitted product is not resent after switching the operating mode or account, order submissions containing such a product will fail.
 
 ## Shipping
 
