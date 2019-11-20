@@ -24,7 +24,14 @@ Define how many days logs will be kept in the database in the **Logs** section. 
 
 Note that you need to provide the IP address of your WooCommerce Shop to YellowCube for giving your shop access to YellowCube. This can also affect the configuration for any staging/development envirnoments. Consult your dedicated service provider for more informations about that.
 
-![](/assets/Informations.png)
+![](/assets/Informations_testing_v2.png)
+
+Once you are ready for production use, change the settings accordingly:
+
+![](/assets/Informations_production_v2_crop.png)
+
+Note that all previously registered articles need to be sent again to registration in production.
+There is no bulk operation yet to automate this process.
 
 ## Shipping
 
