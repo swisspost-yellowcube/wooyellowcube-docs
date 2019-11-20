@@ -45,7 +45,7 @@ YellowCube relies on [shipping zones](https://docs.woocommerce.com/document/sett
 
 Once you have configured shipping zones and added the desired shipping methods to them you will be able to configure YellowCube specific configuration for each of them. You will be able to do that on the configuration page that can be found by navigating to _WooYellowCube -&gt; Shipping_:
 
-![](/assets/Shipping.png)
+![](/assets/Shipping_v2.png)
 
 The page lists all shipping methods \(grouped by zones\) and allows you to configure YellowCube for each of them separately. YellowCube can be enabled by selecting _Activated_ in the _Status_ dropdown for the relevant shipping zone/method.
 
