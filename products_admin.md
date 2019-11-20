@@ -2,18 +2,21 @@
 
 A product that is managed by YellowCube needs to be registered first.
 
+### Product list
 The registration status of each products can be seen on the product listing page:
 
 ![](/assets/product_list_v2_marker.png)
 
 The possible values in the YellowCube column are:
 
+- *-*: Product is not connected to YellowCube.
 - *Submitted*: An new product definition or an update was sent to YellowCube and we are waiting for confirmation. New
   products are not yet connected to YellowCube.
 - *Active*: YellowCube confirmed that it received and processed the product information. Everything seems to be OK.
 - *Error*: YellowCube was unable to process the product information. Check the log on the product edit page to
   learn more.
 
+### Edit product details
 Detailed information about YellowCube communication about the product is available at the bottom of the product edit page.
 
 
@@ -31,16 +34,29 @@ In order to register a product at YellowCube successfully it needs to meet the f
 
 ![](/assets/product_size.png)
 
-Immediately after the product has been created and published its information will be sent to YellowCube.
+In order to trigger the registration at YellowCube you need to click *Send product to YellowCube*.
+Make sure to save any article change prior to click this button as changes are lost.
 
+For later product updates the button is later named *Update product to YellowCube*.
 
+###  Product registration and update
 ![](/assets/product_edit.png)
 
-Log of all the communication about the product can be seen in the right column. If there were any problems you will be able
-to see the error messages here.
+In the left column we can see the general status of the product.
 
-In the left column we can see the general status of the product (similar to the status info in the product listing), we can
-activate LOT management, force re-sending of the product information and remove the product from YellowCube entirely.
+Log of all the communication about the product can be seen in the right column.
+If there were any problems you will be able to see the error messages here.
 
-You can't deactivate LOT management once it has been enabled. Before doing so you need to consider all implications of such
-action. If you are unsure about that please contact Swiss Post support for more information.
+###  Disconnect from YellowCube
+
+A product can be disconnected from YellowCube by clicking the button *Remove the link with YellowCube*.
+The button is only visible for properly registered products.
+
+### Advanced: Lot management
+In order to deal with expiring products, you can enable lot management by choosing *Lot management is enabled* and
+submitting a product update.
+
+You can't deactivate lot management once it has been enabled.
+Even after disconnecting the product, it needs manual delete at YellowCube to re-add it without lot management again.
+Before enabling lot management you need to consider all implications of such action.
+If you are unsure about that please contact Swiss Post support for more information.
