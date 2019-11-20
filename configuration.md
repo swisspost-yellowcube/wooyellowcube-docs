@@ -27,6 +27,9 @@ Note that you need to provide the IP address of your WooCommerce Shop to YellowC
 Every time you save the settings form all states and caches are cleared. Background processes will re-run with the
 next trigger. This reduces issues when switching between Testing / Production and different accounts.
 
+Limitation: Do NOT connect multiple shop instances to the same YellowCube account as WAR request (hourly cron
+containing confirming shippings with track & trace) can not be shared.
+
 ## Production go live
 
 Once you are ready for production use, change the settings accordingly:
