@@ -25,14 +25,16 @@ In order to register a product at YellowCube successfully it needs to meet the f
 - *SKU*: required field, used as primary product identifier. Changes are not supported after registration at YellowCube.
   You will find it under *Product data -> Inventory*.
 
-![](/assets/product_sku.png)
+![](/assets/product_inventory_v2.png)
 
 - *Weight*: in kg, required field.
   You will find it under *Product data -> Shipping*.
 
 - *Dimensions*: in cm, not strictly required. However, it is recommended to provide this information.
 
-![](/assets/product_size.png)
+- *Manage stock*: required to enable for products managed with YellowCube.
+
+![](/assets/product_size_v2.png)
 
 In order to trigger the registration at YellowCube you need to click *Send product to YellowCube*.
 Make sure to save any article change prior to click this button as changes are lost.
@@ -40,7 +42,7 @@ Make sure to save any article change prior to click this button as changes are l
 For later product updates the button is later named *Update product to YellowCube*.
 
 ###  Product registration and update
-![](/assets/product_edit.png)
+![](/assets/product_yc_success_v2.png)
 
 In the left column we can see the general status of the product.
 
