@@ -2,8 +2,8 @@
 
 When relevant orders are created they will be sent to YellowCube as soon as they reach the *Processing* status.
 
-A well integrated online payment method (e.g. credit cards) will update the status either immediately or with a short delay after clearance (based on a callack).  
-If the customer used a payment method that requires manual intervention the operator will need to change the status of the order to *Processing* manually.
+A well integrated online payment method (e.g. credit cards) will update the status either immediately or with a short delay after clearance (based on a callback).  
+If the customer used a payment method that requires manual intervention the store admin will need to change the status of the order to *Processing* manually.
 
 The statuses of the orders can be seen on the order listing page:
 
@@ -38,7 +38,7 @@ Any order submission will reserve its articles and deduct each articles stock co
 An order can stay stuck in status *Pending payment* or maybe *Failed* if a customer cancels on the payment page.
 Manual payment methods typically stay  *On hold*.
 
-In order to free the reserved stock, WooCommerce requires an operator to put the order to status *Cancelled*.
+In order to free the reserved stock, WooCommerce requires a store admin to put the order to status *Cancelled*.
 
 Permanently deleting an order with reserved stock via trash will not restore the stock counter. This is a WooCommerce limitation.
 
@@ -46,14 +46,14 @@ Permanently deleting an order with reserved stock via trash will not restore the
 
 Once an order is submitted to YellowCube, you can not stop its delivery in WooCommerce.
 
-An operator can try to stop delivery by calling [calling YellowCube Support](README.md) as long as the delivery was no yet started.
+A store admin can try to stop delivery by calling [calling YellowCube Support](README.md) as long as the delivery was no yet started.
 
-Additionally, the order will need manual update to represent the correct status and free its stock again.
+Additionally, the store admin will need to manually set the status to *Cancelled* to free its stock again.
 
 ### Returns
 
-Please note that the WooYellowCube currently doen't handle order returns automatically. If a return happens the payment
-refund and any other relevant steps need to be made manually by the store administrator.
+Please note that the WooYellowCube currently doesn't handle order returns automatically. If a return happens the payment
+refund and any other relevant steps need to be made manually by the operator.
 
 
 
