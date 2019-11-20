@@ -4,6 +4,7 @@
 * [Requirements and dependencies](requirements.md)
 * [Installation](installation.md)
 * [Configuration](configuration.md)
+* [Compatibility](compatibility.md)
 * [Update](update.md)
 * [Store admin guide](admin_guide.md)
   * [Products](products_admin.md)
