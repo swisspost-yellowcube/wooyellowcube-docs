@@ -6,7 +6,7 @@ has changes the status of the order to "*Processing*".
 
 The statuses of the orders can be seen on the order listing page:
 
-![](/assets/order_list.png)
+![](/assets/order_list_v2_marker.png)
 
 The possible values in the YellowCube column are:
 
