@@ -42,6 +42,14 @@ In order to free the reserved stock, WooCommerce requires an operator to put the
 
 Permanently deleting an order with reserved stock via trash will not restore the stock counter. This is a WooCommerce limitation.
 
+### Stop order delivery
+
+Once an order is submitted to YellowCube, you can not stop its delivery in WooCommerce.
+
+An operator can try to stop delivery by calling [calling YellowCube Support](README.md) as long as the delivery was no yet started.
+
+Additionally, the order will need manual update to represent the correct status and free its stock again.
+
 ### Returns
 
 Please note that the WooYellowCube currently doen't handle order returns automatically. If a return happens the payment
