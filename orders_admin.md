@@ -10,13 +10,13 @@ The statuses of the orders can be seen on the order listing page:
 
 The possible values in the YellowCube column are:
 
-- *Order not sent to YellowCube*: Order has not been sent to YellowCube at all. This could mean that this specific
+- *-*: Order has not been sent to YellowCube at all. This could mean that this specific
   order shouldn't be processed by YellowCube (sent to a shipping zone that is not handled by YellowCube) or that
   there are still conditions to be met to do so (usually awaiting payment).
-- *Waiting YellowCube response*: Order has been sent to YellowCube but it hasn't been processed on their side yet.
-- *Order sent by YellowCube*: Order was dispatched from the YellowCube facility and the product is on its way to
+- *Submitted*: Order has been sent to YellowCube but it hasn't been processed on their side yet.
+- *Confirmed*: Order was dispatched from the YellowCube facility and the product is on its way to
   the customer. Tracking code is provided in the logs if applicable.
-- *Invalid order*: A problem occured wile trying to process the order on the YellowCube side. Check the logs on the
+- *Error*: A problem occured wile trying to process the order on the YellowCube side. Check the logs on the
   order edit page for more info.
 
 Detailed information about YellowCube communication about the order is available at the bottom of the order edit page.
