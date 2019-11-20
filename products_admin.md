@@ -62,3 +62,8 @@ You can't deactivate lot management once it has been enabled.
 Even after disconnecting the product, it needs manual delete at YellowCube to re-add it without lot management again.
 Before enabling lot management you need to consider all implications of such action.
 If you are unsure about that please contact Swiss Post support for more information.
+
+### Unsupported: Multiple articles with the same SKU
+WooYellowCube doesn't support using the same SKU in multiple articles or variations.
+As a result, each product would have an independent stock counter and a random one would be picked for the update.
+This can be a limitation with certain multilingual approaches.
