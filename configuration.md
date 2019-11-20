@@ -49,6 +49,8 @@ Once you have configured shipping zones and added the desired shipping methods t
 
 The page lists all shipping methods \(grouped by zones\) and allows you to configure YellowCube for each of them separately. YellowCube can be enabled by selecting _Activated_ in the _Status_ dropdown for the relevant shipping zone/method.
 
+Orders still can be manually sent to YellowCube on each [order detail page](orders_admin.md) even if a zone is deactivated for YellowCube.
+
 The other two dropdowns \(_BasicShippingServices_ and _AdditionalShippingServices_\) allow you to select the YellowCube product that should be used.  You will find more detailed information about those in the YellowCube Interface Manual.
 
 ## Activity Log
