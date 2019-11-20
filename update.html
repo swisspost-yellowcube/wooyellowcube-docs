@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Installation · GitBook</title>
+        <title>Update · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="configuration.html" />
+    <link rel="next" href="admin_guide.html" />
     
     
-    <link rel="prev" href="requirements.html" />
+    <link rel="prev" href="configuration.html" />
     
 
     </head>
@@ -115,7 +115,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="installation.html">
+        <li class="chapter " data-level="1.3" data-path="installation.html">
             
                 <a href="installation.html">
             
@@ -141,7 +141,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="update.html">
+        <li class="chapter active" data-level="1.5" data-path="update.html">
             
                 <a href="update.html">
             
@@ -242,7 +242,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Installation</a>
+        <a href="." >Update</a>
     </h1>
 </div>
 
@@ -257,50 +257,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="installation">Installation</h1>
-<h2 id="getting-the-plugin">Getting the plugin</h2>
-<p>Upon installing <a href="https://codex.wordpress.org/Installing_WordPress" target="_blank">Wordpress</a> and <a href="https://docs.woocommerce.com/document/installing-uninstalling-woocommerce/" target="_blank">WooCommerce</a>
-you&apos;ll proceed with WooYellowCube installation.</p>
-<p>First you will need to download the latest version of the plugin from <a href="https://github.com/swisspost-yellowcube/wooyellowcube" target="_blank">its GitHub page</a>.
-You will find the download packages in the releases section:</p>
-<p><img src="assets/github_main.png" alt=""></p>
-<p>On the <em>Releases</em> page you will see the entire history of WooYellowCube releases and you will generally want to use the latest version (top on the
-list). Plugin package can be obtained through the links in the <em>Downloads</em> section.</p>
-<p><img src="assets/github_releases.png" alt=""></p>
-<h2 id="installation">Installation</h2>
-<p>Once you&apos;ve successfully downloaded the package you will need to extract it into the site&apos;s directory structure. There are currently two ways to
-do that.</p>
-<h3 id="manually">Manually</h3>
-<p>All Wordpress plugins are located under the <code>wp-content/plugins/</code> directoy and the same is the case with the WooYellowCube. You should extract the
-package that you downloaded in the previous step and move its contents into the plugnis directory.</p>
-<p>If you&apos;ve done this correctly you should have <code>wooyellowcube</code> inside the <code>wp-content/plugins</code> directory:</p>
-<p><img src="assets/plugin_files_parent.png" alt=""></p>
-<p>and file structure inside it that looks similar to this:</p>
-<p><img src="assets/plugin_files_plugin.png" alt=""></p>
-<p>Depending on your hosting environemnt you will be required to use different tools to achieve this step (FTP, SSH, Git or
-ther type of version control, ...). Consult your hosting provider if you are unsure about this.</p>
-<h3 id="using-the-admin-interface">Using the admin interface</h3>
-<p>This method required web server to have write access to the plugin directory and <code>define(&apos;FS_METHOD&apos;, &apos;direct&apos;);</code> to be
-set in the <code>wp-config.php</code>.</p>
-<p>You should navigate to <em>Plugins</em> section of the Wordpress administration pages and click on the <em>Add new</em> button:</p>
-<p><img src="assets/plugins_add_new.png" alt=""></p>
-<p>This will take you to the plugin installation page where you are able to install plugins from the Wordpress plugin
-directory. Alternatively it is also possible to upload package that was downloaded in the first step. This can be achieved
-by pressing the <em>Upload</em> button and using the upload widget that shows up.</p>
-<p><img src="assets/plugins_upload.png" alt=""></p>
-<p>Please note that the upload widget only supports packages in <code>.zip</code> format so you need to make sure that you downloaded
-the correct package.</p>
-<p>It is worth mentioning that the WooYellowCube plugin currently isn&apos;t available from the Wordpress plugin directory. We are
-aware that this would simplfy the installation process significantly and are currently working on getting it included. We will
-update this document as soon as this is achieved.</p>
-<h2 id="activation">Activation</h2>
-<p>Once the plugin was successfully installed it will appear in the listing that is displayed in the <em>Plugins</em> section
-of the Wordpress administration pages.</p>
-<p>Plugin can be activated by clicking on the <em>Activate</em> link next to it.</p>
-<p><img src="assets/plugin_enable.png" alt=""></p>
-<p>Once the plugin has been successfully activated the <em>Deactivate</em> link will appear next to it and the <em>WooYellowCube</em> section
-will become available in the administration menu.</p>
-<p><img src="assets/plugin_enabled.png" alt=""></p>
+                                <h1 id="update">Update</h1>
+<h2 id="getting-the-latest-version-of-plugin">Getting the latest version of plugin</h2>
 
                                 
                                 </section>
@@ -328,12 +286,12 @@ will become available in the administration menu.</p>
 
             
                 
-                <a href="requirements.html" class="navigation navigation-prev " aria-label="Previous page: Requirements and dependencies">
+                <a href="configuration.html" class="navigation navigation-prev " aria-label="Previous page: Configuration">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="configuration.html" class="navigation navigation-next " aria-label="Next page: Configuration">
+                <a href="admin_guide.html" class="navigation navigation-next " aria-label="Next page: Store admin guide">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -344,7 +302,7 @@ will become available in the administration menu.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installation","level":"1.3","depth":1,"next":{"title":"Configuration","level":"1.4","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"previous":{"title":"Requirements and dependencies","level":"1.2","depth":1,"path":"requirements.md","ref":"requirements.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"installation.md","mtime":"2019-11-20T17:29:29.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T17:30:44.347Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Update","level":"1.5","depth":1,"next":{"title":"Store admin guide","level":"1.6","depth":1,"path":"admin_guide.md","ref":"admin_guide.md","articles":[{"title":"Products","level":"1.6.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},{"title":"Order","level":"1.6.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},{"title":"Activity Log","level":"1.6.3","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]}]},"previous":{"title":"Configuration","level":"1.4","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"update.md","mtime":"2019-11-20T17:29:29.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T17:30:44.347Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
