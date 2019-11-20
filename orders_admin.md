@@ -21,7 +21,7 @@ The possible values in the YellowCube column are:
 
 Detailed information about YellowCube communication about the order is available at the bottom of the order edit page.
 
-![](/assets/order_info.png)
+![](/assets/order_info_v2_crop.png)
 
 The status of the order and the tracking information (if available) are displayed on the left.
 
