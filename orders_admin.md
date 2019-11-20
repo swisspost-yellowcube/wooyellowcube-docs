@@ -5,6 +5,7 @@ When relevant orders are created they will be sent to YellowCube as soon as they
 A well integrated online payment method (e.g. credit cards) will update the status either immediately or with a short delay after clearance (based on a callback).  
 If the customer used a payment method that requires manual intervention the store admin will need to change the status of the order to *Processing* manually.
 
+### Order list
 The status of each orders can be seen on the order listing page:
 
 ![](/assets/order_list_v2_marker.png)
@@ -19,6 +20,8 @@ The possible values in the YellowCube column are:
   the customer. Tracking code is provided in the logs if applicable.
 - *Error*: A problem occured wile trying to process the order on the YellowCube side. Check the logs on the
   order edit page for more info.
+
+### Edit Order for details
 
 Detailed information about YellowCube communication about each order is available at the bottom of the order edit page.
 

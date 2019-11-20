@@ -1,36 +1,38 @@
 ## Product management
 
-Information about the product will be sent to YellowCube upon creation. In order for this to be successful
-you need to make sure that all the required information is populated:
+A product that is managed by YellowCube needs to be registered first.
 
-- *SKU*: required field, YellowCube won't be able to process your orders if you skip it. You will find it
-  under *Product data -> Inventory*.
+The registration status of each products can be seen on the product listing page:
 
-![](/assets/product_sku.png)
-
-- *Weight*: required field, YellowCube won't be able to process your orders if you skip it You will find it
-  under *Product data -> Shipping*.
-
-- *Dimensions*: Not strictly required. However, it is recommended to provide this information.
-
-![](/assets/product_size.png)
-
-Immediately after the product has been created and published its information will be sent to YellowCube. The status
-of the product can be seen in the general product listing:
-
-![](/assets/product_list.png)
+![](/assets/product_list_v2_marker.png)
 
 The possible values in the YellowCube column are:
 
-- *Product sent to YellowCube*: Product info was sent to YellowCube, but we didn't get any reply yet. Product is not
-  considered conntected to YellowCube yet.
-- *Received*: YellowCube confirmed that it received and processed the product information. Everything seems to be OK.
-- *Waiting response*: An update was sent to YellowCube and we are waiting for confirmation. Product is already connected
-  with YellowCube.
-- *Invalid ART*: YellowCube was unable to process the product information. Check the log on the product edit page to
+- *Submitted*: An new product definition or an update was sent to YellowCube and we are waiting for confirmation. New
+  products are not yet connected to YellowCube.
+- *Active*: YellowCube confirmed that it received and processed the product information. Everything seems to be OK.
+- *Error*: YellowCube was unable to process the product information. Check the log on the product edit page to
   learn more.
 
 Detailed information about YellowCube communication about the product is available at the bottom of the product edit page.
+
+
+In order to register a product at YellowCube successfully it needs to meet the following requirements:
+
+- *SKU*: required field, used as primary product identifier. Changes are not supported after registration at YellowCube.
+  You will find it under *Product data -> Inventory*.
+
+![](/assets/product_sku.png)
+
+- *Weight*: in kg, required field.
+  You will find it under *Product data -> Shipping*.
+
+- *Dimensions*: in cm, not strictly required. However, it is recommended to provide this information.
+
+![](/assets/product_size.png)
+
+Immediately after the product has been created and published its information will be sent to YellowCube.
+
 
 ![](/assets/product_edit.png)
 
