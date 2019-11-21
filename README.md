@@ -8,10 +8,17 @@ If you need any support by the YellowCube team please contact us at www.yellowcu
 
 # Table of contents
 
+* [Introduction](README.md)
 * [Requirements and dependencies](requirements.md)
 * [Installation](installation.md)
 * [Configuration](configuration.md)
+* [Compatibility](compatibility.md)
+* [Update](update.md)
 * [Store admin guide](admin_guide.md)
+  * [Products](products_admin.md)
+  * [Order](orders_admin.md)
+  * [Stock](stock.md)
+  * [Activity Log](activity-log.md)
 
 # License
 
