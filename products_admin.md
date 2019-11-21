@@ -67,3 +67,12 @@ If you are unsure about that please contact Swiss Post support for more informat
 WooYellowCube doesn't support using the same SKU in multiple articles or variations.
 As a result, each product would have an independent stock counter and a random one would be picked for the update.
 This can be a limitation with certain multilingual approaches.
+
+### Troubleshooting Product deletion and trash
+
+If you ever create a duplicated product with the same SKU and delete it again, reconnect the original product again
+by choosing "Update to YellowCube" on the product edit page. Try to avoid duplicate SKUs whenever possible. Either
+edit the product and immediately change the SKU when duplicating or later delete it for real.
+
+It is highly recommended not to delete unique products (with distinct SKU) as it can cause errors and inconsistencies
+when processing orders that contained these products. You can send the products to the product trash and keep them.
