@@ -285,7 +285,9 @@
                                 
                                 <h1 id="stock-management">Stock management</h1>
 <p>In the <strong>Stock management</strong> you will find the effective YellowCube product stock for each <em>Product name (SKU)</em> and compare it with the local WooCommerce stock counter.</p>
+<p>To understand potential stock counter inconsistencies, we also display the pending article count.</p>
 <p><img src="assets/Stock_management_v2.png" alt=""></p>
+<p>This contains all articles in received orders that are not yet processed by YellowCube. </p>
 <p>Columns are:</p>
 <ul>
 <li><em>SKU</em>: The unique product identifier</li>
@@ -297,19 +299,26 @@
 <li><em>Stock similarity</em>: <em>* </em>Different stock* if it doesn&apos;t match.</li>
 <li><em>Details</em>: Access to optional lot management details.</li>
 </ul>
+<h2 id="stock-count-math">Stock count math</h2>
 <p>YellowCube exports each night at about 04:00 the current stock information. The daily cron then updates the stock table
 with the information. Even on force refresh, the stock information is not more up-to-date.</p>
 <p>On the other hand, WooCommerce decreases the stock as soon as an order is received.</p>
-<p>To minimise the stock counter inconsistencies, we also display the pending article count.
-This contains all articles in received orders that are not yet processed by YellowCube. </p>
+<p>Thus the stock is considered the <em>Same stock</em> if</p>
+<blockquote>
+<p><strong>Shop stock</strong> + <strong>Shop pending</strong> == <strong>YellowCube stock</strong></p>
+</blockquote>
+<p>Accordingly an update of <em>Shop stock</em> will deduct <em>Shop pending</em> from the <em>YellowCube stock</em></p>
+<p>Thus WooCommerce <a href="orders_admin.html">does not fit for splitting orders and managing stock across multiple stores</a>
+including additional local product storage.</p>
+<h2 id="stock-actions">Stock actions</h2>
 <p>Here you also can take action for selected products:</p>
 <ul>
 <li><em>Send ART profile</em>
 Will send basic information (name, SKU, size, weight, ...) about the product to YellowCube. This generally happnes automatically upon product creation and update so it should only be used if something went wrong.</li>
 <li><em>Update WooCommerce Stock with YellowCube</em>:
-Stock information in WooCommerce will sometimes diverge from the one reported by YellowCube for various reasons. If you are sure that the stock information provided by the latter is correct you can use this action to override the information WooCommerce has about the selected products.</li>
+If you are sure that the stock information provided by YellowCube is correct you can use this action to override the WooCommerce stock information.</li>
 <li><em>Force to refresh inventory</em>
-This will have the same effect as _Update WooCommerce Stock with YellowCube _but it will apply to all products and not just the ones that you manually selected.</li>
+This will reload the stock table data from YellowCube based on the last inventory export.</li>
 </ul>
 
                                 
@@ -354,7 +363,7 @@ This will have the same effect as _Update WooCommerce Stock with YellowCube _but
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Stock","level":"1.7.3","depth":2,"next":{"title":"Activity Log","level":"1.7.4","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]},"previous":{"title":"Order","level":"1.7.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"stock.md","mtime":"2019-11-21T17:49:41.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T17:51:27.240Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Stock","level":"1.7.3","depth":2,"next":{"title":"Activity Log","level":"1.7.4","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]},"previous":{"title":"Order","level":"1.7.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"stock.md","mtime":"2019-11-21T18:41:52.635Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T18:43:04.226Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
