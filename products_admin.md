@@ -60,6 +60,8 @@ You can bass *EAN* numbers to YellowCube by attaching a custom attribute named *
 
 ![](/assets/product_ean_v2.png)
 
+EAN codes typically contain 8 or 13 characters. YellowCube will use them to better identify labelled the products.
+
 ### Advanced: Lot management
 In order to deal with expiring products, you can enable lot management by choosing *Lot management is enabled* and
 submitting a product update.
