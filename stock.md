@@ -2,7 +2,11 @@
 
 In the **Stock management** you will find the effective YellowCube product stock for each _Product name \(SKU\)_ and compare it with the local WooCommerce stock counter.
 
+To understand potential stock counter inconsistencies, we also display the pending article count.
+
 ![](/assets/Stock_management_v2.png)
+
+This contains all articles in received orders that are not yet processed by YellowCube. 
 
 Columns are:
 - *SKU*: The unique product identifier
@@ -14,19 +18,28 @@ Columns are:
 - *Stock similarity*: ** *Different stock* if it doesn't match.
 - *Details*: Access to optional lot management details.
 
+## Stock count math
+
 YellowCube exports each night at about 04:00 the current stock information. The daily cron then updates the stock table
 with the information. Even on force refresh, the stock information is not more up-to-date.
 
 On the other hand, WooCommerce decreases the stock as soon as an order is received.
 
-To minimise the stock counter inconsistencies, we also display the pending article count.
-This contains all articles in received orders that are not yet processed by YellowCube. 
+Thus the stock is considered the *Same stock* if
 
+> **Shop stock** + **Shop pending** == **YellowCube stock**
+
+Accordingly an update of *Shop stock* will deduct *Shop pending* from the *YellowCube stock*
+
+Thus WooCommerce [does not fit for splitting orders and managing stock across multiple stores](orders_admin.md)
+including additional local product storage.
+
+## Stock actions
 Here you also can take action for selected products:
 
 * _Send ART profile_
   Will send basic information \(name, SKU, size, weight, ...\) about the product to YellowCube. This generally happnes automatically upon product creation and update so it should only be used if something went wrong.
 * _Update WooCommerce Stock with YellowCube_:
-  Stock information in WooCommerce will sometimes diverge from the one reported by YellowCube for various reasons. If you are sure that the stock information provided by the latter is correct you can use this action to override the information WooCommerce has about the selected products.
+  If you are sure that the stock information provided by YellowCube is correct you can use this action to override the WooCommerce stock information.
 * _Force to refresh inventory_
-  This will have the same effect as \_Update WooCommerce Stock with YellowCube \_but it will apply to all products and not just the ones that you manually selected.
+  This will reload the stock table data from YellowCube based on the last inventory export.

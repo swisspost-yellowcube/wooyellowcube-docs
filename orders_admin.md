@@ -73,7 +73,7 @@ An order can receive multiple track & trace numbers.
 
 YellowCube does NOT support order splitting, it is either processed in full or not.
 
-WooCommerce does NOT support multiple storages or a UI for order splitting.
+WooCommerce does NOT support multiple stores or a UI for order splitting.
 
 Limitation: As a result, orders reach the completed state even if some of their products are not registered / shipped by YellowCube.
 
