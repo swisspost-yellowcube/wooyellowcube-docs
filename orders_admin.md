@@ -62,8 +62,9 @@ Additionally, the store admin will need to manually set the status to *Cancelled
 
 ### Returns
 
-Please note that the WooYellowCube currently doesn't handle order returns automatically. If a return happens the payment
-refund and any other relevant steps need to be made manually by the operator.
+Please note that the WooYellowCube currently doesn't handle order returns automatically. If a return happens the
+affected order will remain unchanged, the payment refund and any other relevant steps need to be made manually by
+the store admin. The stock increase will be visible in the stock table the next day after the refund.
 
 ### Order Completion
 
