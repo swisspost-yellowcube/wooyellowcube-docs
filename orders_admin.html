@@ -307,6 +307,8 @@ order edit page for more info.</li>
 <p>The status of the order and the tracking information (if available) are displayed on the left.</p>
 <p>Log of all the communication about the order can be seen in the right column. If there were any problems you will be able
 to see the error messages here.</p>
+<p>Limitation: If an order matched by a YellowCube enabled zone contains no single article effectively managed by YellowCube, the submission fails with error &quot;<em>The content of element &#x2018;ns1:OrderPositions&#x2019; is not complete.</em>&quot;</p>
+<p>Thus if choose YellowCube with WooCommerce, it is highly recommended to register all products at YellowCube.</p>
 <h3 id="stock-reservation-on-submission">Stock reservation on submission</h3>
 <p>Any order submission will reserve its articles and deduct each articles stock counter immediately.</p>
 <h3 id="proper-order-cancellation">Proper order cancellation</h3>
@@ -322,6 +324,12 @@ See also the official <a href="https://docs.woocommerce.com/document/managing-or
 <h3 id="returns">Returns</h3>
 <p>Please note that the WooYellowCube currently doesn&apos;t handle order returns automatically. If a return happens the payment
 refund and any other relevant steps need to be made manually by the operator.</p>
+<h3 id="order-completion">Order Completion</h3>
+<p>As soon as an order track &amp; trace information is received, the order status is set to Completed.
+An order can receive multiple track &amp; trace numbers.</p>
+<p>YellowCube does NOT support order splitting, it is either processed in full or not.</p>
+<p>WooCommerce does NOT support multiple storages or a UI for order splitting.</p>
+<p>Limitation: As a result, orders reach the completed state even if some of their products are not registered / shipped by YellowCube.</p>
 <h3 id="backed-order-creation">Backed order creation</h3>
 <p>Backend order creation is currently not supported and such orders won&apos;t be processed by the YellowCube. If a store admin
 needs to create an order on behalf of the customer it needs to be done through the public store interface.</p>
@@ -371,7 +379,7 @@ If YellowCube is disabled for a matched shipping zone, a store admin can still m
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Order","level":"1.7.2","depth":2,"next":{"title":"Stock","level":"1.7.3","depth":2,"path":"stock.md","ref":"stock.md","articles":[]},"previous":{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"orders_admin.md","mtime":"2019-11-21T00:55:00.093Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T00:56:49.393Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Order","level":"1.7.2","depth":2,"next":{"title":"Stock","level":"1.7.3","depth":2,"path":"stock.md","ref":"stock.md","articles":[]},"previous":{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"orders_admin.md","mtime":"2019-11-21T01:10:37.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T01:12:23.456Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
