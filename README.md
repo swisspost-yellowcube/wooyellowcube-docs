@@ -4,6 +4,8 @@ This manual will support you with setting up [YellowCube](https://www.post.ch/de
 
 This document is publicly developed on [GitHub](https://github.com/swisspost-yellowcube/wooyellowcube-docs) in the [GitBook](https://github.com/GitbookIO/gitbook) format. If you notice any mistakes or inconsistencies please consider proposing improvementy by opening a [pull request](https://github.com/swisspost-yellowcube/wooyellowcube-docs/compare) or [opening an issue](https://github.com/swisspost-yellowcube/wooyellowcube-docs/issues/new) describing the problem.
 
+If you need any support by the YellowCube team please contact us at www.yellowcube.ch or by phone [+41 58 386 48 08](tel:+41583864808)
+
 # Table of contents
 
 * [Requirements and dependencies](requirements.md)
