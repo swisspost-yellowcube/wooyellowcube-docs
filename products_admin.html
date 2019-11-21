@@ -326,6 +326,9 @@ If there were any problems you will be able to see the error messages here.</p>
 <h3 id="disconnect-from-yellowcube">Disconnect from YellowCube</h3>
 <p>A product can be disconnected from YellowCube by clicking the button <em>Remove the link with YellowCube</em>.
 The button is only visible for properly registered products.</p>
+<h3 id="advanced-using-ean">Advanced: Using EAN</h3>
+<p>You can bass <em>EAN</em> numbers to YellowCube by attaching a custom attribute named <em>EAN</em> to the product.</p>
+<p><img src="assets/product_ean_v2.png" alt=""></p>
 <h3 id="advanced-lot-management">Advanced: Lot management</h3>
 <p>In order to deal with expiring products, you can enable lot management by choosing <em>Lot management is enabled</em> and
 submitting a product update.</p>
@@ -337,6 +340,12 @@ If you are unsure about that please contact Swiss Post support for more informat
 <p>WooYellowCube doesn&apos;t support using the same SKU in multiple articles or variations.
 As a result, each product would have an independent stock counter and a random one would be picked for the update.
 This can be a limitation with certain multilingual approaches.</p>
+<h3 id="troubleshooting-product-deletion-and-trash">Troubleshooting Product deletion and trash</h3>
+<p>If you ever create a duplicated product with the same SKU and delete it again, reconnect the original product again
+by choosing &quot;Update to YellowCube&quot; on the product edit page. Try to avoid duplicate SKUs whenever possible. Either
+edit the product and immediately change the SKU when duplicating or later delete it for real.</p>
+<p>It is highly recommended not to delete unique products (with distinct SKU) as it can cause errors and inconsistencies
+when processing orders that contained these products. You can send the products to the product trash and keep them.</p>
 
                                 
                                 </section>
@@ -380,7 +389,7 @@ This can be a limitation with certain multilingual approaches.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Products","level":"1.7.1","depth":2,"next":{"title":"Order","level":"1.7.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},"previous":{"title":"Store admin guide","level":"1.7","depth":1,"path":"admin_guide.md","ref":"admin_guide.md","articles":[{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},{"title":"Order","level":"1.7.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},{"title":"Stock","level":"1.7.3","depth":2,"path":"stock.md","ref":"stock.md","articles":[]},{"title":"Activity Log","level":"1.7.4","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"products_admin.md","mtime":"2019-11-21T15:10:08.448Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T15:11:28.366Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Products","level":"1.7.1","depth":2,"next":{"title":"Order","level":"1.7.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},"previous":{"title":"Store admin guide","level":"1.7","depth":1,"path":"admin_guide.md","ref":"admin_guide.md","articles":[{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},{"title":"Order","level":"1.7.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},{"title":"Stock","level":"1.7.3","depth":2,"path":"stock.md","ref":"stock.md","articles":[]},{"title":"Activity Log","level":"1.7.4","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"products_admin.md","mtime":"2019-11-21T15:26:47.116Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T15:27:55.099Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
