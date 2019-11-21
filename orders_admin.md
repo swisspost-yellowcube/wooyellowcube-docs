@@ -34,6 +34,10 @@ The status of the order and the tracking information (if available) are displaye
 Log of all the communication about the order can be seen in the right column. If there were any problems you will be able
 to see the error messages here.
 
+Limitation: If an order matched by a YellowCube enabled zone contains no single article effectively managed by YellowCube, the submission fails with error "*The content of element ‘ns1:OrderPositions’ is not complete.*"
+
+Thus if choose YellowCube with WooCommerce, it is highly recommended to register all products at YellowCube.
+
 ### Stock reservation on submission
 
 Any order submission will reserve its articles and deduct each articles stock counter immediately.
@@ -61,7 +65,16 @@ Additionally, the store admin will need to manually set the status to *Cancelled
 Please note that the WooYellowCube currently doesn't handle order returns automatically. If a return happens the payment
 refund and any other relevant steps need to be made manually by the operator.
 
+### Order Completion
 
+As soon as an order track & trace information is received, the order status is set to Completed.
+An order can receive multiple track & trace numbers.
+
+YellowCube does NOT support order splitting, it is either processed in full or not.
+
+WooCommerce does NOT support multiple storages or a UI for order splitting.
+
+Limitation: As a result, orders reach the completed state even if some of their products are not registered / shipped by YellowCube.
 
 ### Backed order creation
 
