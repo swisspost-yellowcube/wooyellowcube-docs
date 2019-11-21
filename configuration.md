@@ -58,19 +58,3 @@ The other two dropdowns \(_BasicShippingServices_ and _AdditionalShippingService
 ## Activity Log
 
 Check the [**activity log**](/activity-log.md) to see the activity on your website.
-
-## Stock management
-
-In the **WooYellowCube stock management** you will find information about your products. For each _Product name \(SKU\)_ you can check how many items are available in the YellowCube stock.
-
-![](/assets/Stock_management_top.png)Here you also can take action for selected products:
-
-* _Send ART profile_
-  Will send basic information \(name, SKU, size, weight, ...\) about the product to YellowCube. This generally happnes automatically upon product creation and update so it should only be used if something went wrong.
-* _Update WooCommerce Stock with YellowCube_:
-  Stock information in WooCommerce will sometimes diverge from the one reported by YellowCube for various reasons. If you are sure that the stock information provided by the latter is correct you can use this action to override the information WooCommerce has about the selected products.
-* _Force to refresh inventory_
-  This will have the same effect as \_Update WooCommerce Stock with YellowCube \_but it will apply to all products and not just the ones that you manually selected.
-
-![](/assets/Stock_management.png)
-
