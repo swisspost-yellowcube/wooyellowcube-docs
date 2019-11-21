@@ -54,6 +54,9 @@ If there were any problems you will be able to see the error messages here.
 A product can be disconnected from YellowCube by clicking the button *Remove the link with YellowCube*.
 The button is only visible for properly registered products.
 
+Disconnected products will not be sent to YellowCube as order items if they are part of an order.
+See also [Order management - Order completion](orders_admin.md)
+
 If you later reconnect the product again, it will match the previously created product at YellowCube again based on
 the SKU. Creating a new record requires manual deletion by the [YellowCube team](README.md).
 
