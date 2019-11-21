@@ -79,10 +79,19 @@ Limitation: As a result, orders reach the completed state even if some of their 
 
 ### Backed order creation
 
-Backend order creation is currently not supported and such orders won't be processed by the YellowCube. If a store admin
-needs to create an order on behalf of the customer it needs to be done through the public store interface.
+Backend order creation is supported and such orders can be force submitted to YellowCube. Force submitting is required
+since the shipping zones are never matched. It might be still easier to use the public store interface to create an
+order on behalf of the customer.
 
 ### Advanced: Manual order submission
 
 Some store admins like to determine on a per order basis if they handle it on their own or pass it to YellowCube.
 If YellowCube is disabled for a matched shipping zone, a store admin can still manually force submit it.
+
+### Troubleshoot order submission errors
+
+If the order triggers a submission error, make sure first that all products are properly registered at YellowCube by
+resubmitting them with the button *Update product to YellowCube*. Then try submitting the order again.
+
+If a product has never been sent to YellowCube before, it is skipped on order submission and expected to be manually
+processed. In order to submit such a product to YellowCube, you need to create a new order after product registration.
