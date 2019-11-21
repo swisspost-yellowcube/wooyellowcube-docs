@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="activity-log.html" />
+    <link rel="next" href="stock.html" />
     
     
     <link rel="prev" href="products_admin.html" />
@@ -207,7 +207,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="activity-log.html">
+        <li class="chapter " data-level="1.7.3" data-path="stock.html">
+            
+                <a href="stock.html">
+            
+                    
+                    Stock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="activity-log.html">
             
                 <a href="activity-log.html">
             
@@ -273,7 +286,7 @@
                                 <h2 id="order-management">Order management</h2>
 <p>An order is relevant for YellowCube if the determined shipping zone is enabled for YellowCube.</p>
 <p>When relevant orders are created they will be sent to YellowCube as soon as they reach the <em>Processing</em> status.</p>
-<p>A well integrated online payment method (e.g. credit cards) will update the status either immediately or with a short delay after clearance (based on a callback).<br>If the customer used a payment method that requires manual intervention the store admin will need to change the status of the order to <em>Processing</em> manually.</p>
+<p>A well integrated online payment method (e.g. credit cards) will update the status either immediately or with a short delay after clearance (based on a callback).<br>If the selected payment method requires manual intervention, the order remains in status <em>On hold</em> until the store admin changes it to <em>Processing</em> manually upon payment.</p>
 <h3 id="order-list">Order list</h3>
 <p>The status of each orders can be seen on the order listing page:</p>
 <p><img src="assets/order_list_v2_marker.png" alt=""></p>
@@ -298,8 +311,9 @@ to see the error messages here.</p>
 <p>Any order submission will reserve its articles and deduct each articles stock counter immediately.</p>
 <h3 id="proper-order-cancellation">Proper order cancellation</h3>
 <p>An order can stay stuck in status <em>Pending payment</em> or maybe <em>Failed</em> if a customer cancels on the payment page.
-Manual payment methods typically stay  <em>On hold</em>.</p>
-<p>In order to free the reserved stock, WooCommerce requires a store admin to put the order to status <em>Cancelled</em>.</p>
+Customers choosing manual payment methods in status <em>On hold</em> might change their mind about the order.
+See also the official <a href="https://docs.woocommerce.com/document/managing-orders/" target="_blank">status definition</a>.</p>
+<p>In order to free the reserved stock on cancellation, WooCommerce requires a store admin to put the order to status <em>Cancelled</em>.</p>
 <p>Permanently deleting an order with reserved stock via trash will not restore the stock counter. This is a WooCommerce limitation.</p>
 <h3 id="stop-order-delivery">Stop order delivery</h3>
 <p>Once an order is submitted to YellowCube, you can not stop its delivery in WooCommerce.</p>
@@ -346,7 +360,7 @@ If YellowCube is disabled for a matched shipping zone, a store admin can still m
                 </a>
                 
                 
-                <a href="activity-log.html" class="navigation navigation-next " aria-label="Next page: Activity Log">
+                <a href="stock.html" class="navigation navigation-next " aria-label="Next page: Stock">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -357,7 +371,7 @@ If YellowCube is disabled for a matched shipping zone, a store admin can still m
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Order","level":"1.7.2","depth":2,"next":{"title":"Activity Log","level":"1.7.3","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]},"previous":{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"orders_admin.md","mtime":"2019-11-20T23:44:58.988Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T23:46:49.857Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Order","level":"1.7.2","depth":2,"next":{"title":"Stock","level":"1.7.3","depth":2,"path":"stock.md","ref":"stock.md","articles":[]},"previous":{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"orders_admin.md","mtime":"2019-11-21T00:55:00.093Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T00:56:49.393Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

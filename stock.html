@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Update · GitBook</title>
+        <title>Stock · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="admin_guide.html" />
+    <link rel="next" href="activity-log.html" />
     
     
-    <link rel="prev" href="compatibility.html" />
+    <link rel="prev" href="orders_admin.html" />
     
 
     </head>
@@ -154,7 +154,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="update.html">
+        <li class="chapter " data-level="1.6" data-path="update.html">
             
                 <a href="update.html">
             
@@ -207,7 +207,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="stock.html">
+        <li class="chapter active" data-level="1.7.3" data-path="stock.html">
             
                 <a href="stock.html">
             
@@ -268,7 +268,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Update</a>
+        <a href="." >Stock</a>
     </h1>
 </div>
 
@@ -283,8 +283,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="update">Update</h1>
-<h2 id="getting-the-latest-version-of-plugin">Getting the latest version of plugin</h2>
+                                <h1 id="stock-management">Stock management</h1>
+<p>In the <strong>Stock management</strong> you will find the effective YellowCube product stock for each <em>Product name (SKU)</em> and compare it with the local WooCommerce stock counter.</p>
+<p><img src="assets/Stock_management_v2.png" alt=""></p>
+<p>Columns are:</p>
+<ul>
+<li><em>SKU</em>: The unique product identifier</li>
+<li><em>Shop product</em>: A link to the connected WooCommerce product</li>
+<li><em>Shop stock</em>: Available stock as of the shop counter.</li>
+<li><em>Shop pending</em>: Orders that are not yet sent to YellowCube or outstanding confirmation.</li>
+<li><em>YellowCube stock</em>: The effective YellowCube stock at date. </li>
+<li><em>YellowCube date</em>: The date of the last stock report.</li>
+<li><em>Stock similarity</em>: <em>* </em>Different stock* if it doesn&apos;t match.</li>
+<li><em>Details</em>: Access to optional lot management details.</li>
+</ul>
+<p>YellowCube exports each night at about 04:00 the current stock information. The daily cron then updates the stock table
+with the information. Even on force refresh, the stock information is not more up-to-date.</p>
+<p>On the other hand, WooCommerce decreases the stock as soon as an order is received.</p>
+<p>To minimise the stock counter inconsistencies, we also display the pending article count.
+This contains all articles in received orders that are not yet processed by YellowCube. </p>
+<p>Here you also can take action for selected products:</p>
+<ul>
+<li><em>Send ART profile</em>
+Will send basic information (name, SKU, size, weight, ...) about the product to YellowCube. This generally happnes automatically upon product creation and update so it should only be used if something went wrong.</li>
+<li><em>Update WooCommerce Stock with YellowCube</em>:
+Stock information in WooCommerce will sometimes diverge from the one reported by YellowCube for various reasons. If you are sure that the stock information provided by the latter is correct you can use this action to override the information WooCommerce has about the selected products.</li>
+<li><em>Force to refresh inventory</em>
+This will have the same effect as _Update WooCommerce Stock with YellowCube _but it will apply to all products and not just the ones that you manually selected.</li>
+</ul>
 
                                 
                                 </section>
@@ -312,12 +338,12 @@
 
             
                 
-                <a href="compatibility.html" class="navigation navigation-prev " aria-label="Previous page: Compatibility">
+                <a href="orders_admin.html" class="navigation navigation-prev " aria-label="Previous page: Order">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="admin_guide.html" class="navigation navigation-next " aria-label="Next page: Store admin guide">
+                <a href="activity-log.html" class="navigation navigation-next " aria-label="Next page: Activity Log">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -328,7 +354,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Update","level":"1.6","depth":1,"next":{"title":"Store admin guide","level":"1.7","depth":1,"path":"admin_guide.md","ref":"admin_guide.md","articles":[{"title":"Products","level":"1.7.1","depth":2,"path":"products_admin.md","ref":"products_admin.md","articles":[]},{"title":"Order","level":"1.7.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},{"title":"Stock","level":"1.7.3","depth":2,"path":"stock.md","ref":"stock.md","articles":[]},{"title":"Activity Log","level":"1.7.4","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]}]},"previous":{"title":"Compatibility","level":"1.5","depth":1,"path":"compatibility.md","ref":"compatibility.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"update.md","mtime":"2019-11-21T00:55:00.097Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T00:56:49.393Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Stock","level":"1.7.3","depth":2,"next":{"title":"Activity Log","level":"1.7.4","depth":2,"path":"activity-log.md","ref":"activity-log.md","articles":[]},"previous":{"title":"Order","level":"1.7.2","depth":2,"path":"orders_admin.md","ref":"orders_admin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"stock.md","mtime":"2019-11-21T00:55:00.093Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T00:56:49.393Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
