@@ -54,6 +54,12 @@ If there were any problems you will be able to see the error messages here.
 A product can be disconnected from YellowCube by clicking the button *Remove the link with YellowCube*.
 The button is only visible for properly registered products.
 
+### Advanced: Using EAN
+
+You can bass *EAN* numbers to YellowCube by attaching a custom attribute named *EAN* to the product.
+
+![](/assets/product_ean_v2.png)
+
 ### Advanced: Lot management
 In order to deal with expiring products, you can enable lot management by choosing *Lot management is enabled* and
 submitting a product update.
