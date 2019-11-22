@@ -78,7 +78,7 @@ The YellowCube plugin needs multiple recurring background processes to check for
 finally update the order with track & trace information.
 
 Without any specific Cron setup, the YellowCube plugin will check for and trigger overdue background processes on every
-website request.
+website request. This can randomly cause slow page requests.
 
 You can avoid this additional overhead by setting up a dedicated System Cron. As this is hosting specific, check the documentation of your hosting provider how to setup Cron.
 
