@@ -10,10 +10,10 @@
     you are not sure how to do that consider checking the relevant documentation sections([[1]](https://codex.wordpress.org/Main_Page), [[2]](https://docs.woocommerce.com/documentation/plugins/woocommerce/)) or finding professional support. Wordpress, WooCommerce and WooYellowCube
     plugin are all open source software which means that there are many experts with the necessary expertise available.
 
-3. *Server requirements*:
+3. *Server requirements*:  
+    See also [WooCommerce requirements](https://docs.woocommerce.com/document/server-requirements/)).
 
-  - *PHP version*: WooYellowCube plugin will work with any supported version of PHP (5.6+ at the time of writing). However, it is strongly
-     recommended to use PHP 7 or greater (which is actually [required by WooCommerce](https://docs.woocommerce.com/document/server-requirements/)).
+  - *PHP version*: WooYellowCube plugin will work with any supported version of PHP 7+.  
 
   - *SOAP PHP extension*: YellowCube uses [SOAP](https://en.wikipedia.org/wiki/SOAP) to communicate with individual stores. WooYellowCube plugin
     requires [PHP SOAP extension](http://php.net/manual/en/book.soap.php) to be installed on the server for that reason. If you are unsure if
@@ -28,4 +28,4 @@
 5. *YellowCube PHP SDK*: WooYellowCube depends on the [official PHP SDK](https://github.com/swisspost-yellowcube/yellowcube-php). If you will install
     the plugin using the [suggested method](installation.md) you don't need to do anything as it is already bundled in the official package.
 
-You should also check the [Wordpress](http://wordpress.org/about/requirements/) and [WooCommerce](https://docs.woocommerce.com/document/server-requirements/) requirements.
+You should also check the [WordPress](http://wordpress.org/about/requirements/) and [WooCommerce](https://docs.woocommerce.com/document/server-requirements/) requirements.
