@@ -93,13 +93,13 @@ As a result, all background updates will stop temporarily.
 ### Setup the system cron
 These are the endpoints to call the cron-jobs:
 
-* Typically ever 1..5 minute, checks for successful order / product submission if any is pending.  
+* Typically every 1..5 minute, checks for successful order / product submission if any is pending.  
   https://example.com/?cron_response=true  
   Changes order / product status from "Submitted" to "Confirmed" or "Error". (WAB, ART)
-* Typically hourly, checks for order shipping if any is pending (max 10 days).
+* Typically every 30 mins or hourly, checks for order shipping if any is pending (max 10 days).  
   https://example.com/?cron_hourly=true   
   Saves the track & trace number on order. (WAR)
-* Typically daily, updates inventory stock information from YellowCube.
+* Typically daily, updates inventory stock information from YellowCube.  
   recommended at 06:00 after YellowCube exported the inventory at 04:00-04:30  
   https://example.com/?cron_daily=true  
 
@@ -110,8 +110,8 @@ As an example, on a linux server with SSH terminal access you can typically setu
 ~$ crontab -l
 # Every 5 minutes:
 */5 * * * * wget -q --delete-after https://example.com/?cron_response=true
-# Every hour at minute 0:
-0 * * * * wget -q --delete-after https://example.com/?cron_hourly=true
+# Every 30 minutes:
+*/30 * * * * wget -q --delete-after https://example.com/?cron_hourly=true
 # Every day at 06:00:
 0 6 * * * wget -q --delete-after https://example.com/?cron_daily=true
 ```
