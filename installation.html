@@ -327,6 +327,35 @@ of the Wordpress administration pages.</p>
 <p>Once the plugin has been successfully activated the <em>Deactivate</em> link will appear next to it and the <em>WooYellowCube</em> section
 will become available in the administration menu.</p>
 <p><img src="assets/plugin_enabled.png" alt=""></p>
+<h2 id="cron-for-background-processes">Cron for background processes</h2>
+<p>The YellowCube plugin needs multiple recurring background processes to check for successful order processing and
+finally update the order with track &amp; trace information.</p>
+<p>Without any specific Cron setup, the YellowCube plugin will check for and trigger overdue background processes on every
+website request.</p>
+<p>You can avoid this additional overhead by setting up a dedicated System Cron. As this is hosting specific, check the documentation of your hosting provider how to setup Cron.</p>
+<h3 id="disable-the-fallback-cron">Disable the fallback cron</h3>
+<p>Edit <code>wp-config.php</code> and add the following line right BEFORE the line with &quot;wp-settings.php&quot;</p>
+<pre><code>define(&apos;DISABLE_WP_CRON&apos;, &apos;true&apos;);
+</code></pre><p>As a result, all background updates will stop temporarily.</p>
+<h3 id="setup-the-system-cron">Setup the system cron</h3>
+<p>These are the endpoints to call the cron-jobs:</p>
+<ul>
+<li>Typically ever 1..5 minute, checks for successful order / product submission if any is pending.<br><a href="https://example.com/?cron_response=true" target="_blank">https://example.com/?cron_response=true</a><br>Changes order / product status from &quot;Submitted&quot; to &quot;Confirmed&quot; or &quot;Error&quot;. (WAB, ART)</li>
+<li>Typically hourly, checks for order shipping if any is pending (max 10 days).
+<a href="https://example.com/?cron_hourly=true" target="_blank">https://example.com/?cron_hourly=true</a><br>Saves the track &amp; trace number on order. (WAR)</li>
+<li>Typically daily, updates inventory stock information from YellowCube.
+recommended at 06:00 after YellowCube exported the inventory at 04:00-04:30<br><a href="https://example.com/?cron_daily=true" target="_blank">https://example.com/?cron_daily=true</a>  </li>
+</ul>
+<p>Replace &quot;example.com&quot; with your Site URL.</p>
+<p>As an example, on a linux server with SSH terminal access you can typically setup Cron with crontab:</p>
+<pre><code>~$ crontab -l
+# Every 5 minutes:
+*/5 * * * * wget -q --delete-after https://example.com/?cron_response=true
+# Every hour at minute 0:
+0 * * * * wget -q --delete-after https://example.com/?cron_hourly=true
+# Every day at 06:00:
+0 6 * * * wget -q --delete-after https://example.com/?cron_daily=true
+</code></pre><p>Check the <a href="activity-log.html">Activity log</a> and make sure the background processes are called.</p>
 
                                 
                                 </section>
@@ -370,7 +399,7 @@ will become available in the administration menu.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installation","level":"1.3","depth":1,"next":{"title":"Configuration","level":"1.4","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"previous":{"title":"Requirements and dependencies","level":"1.2","depth":1,"path":"requirements.md","ref":"requirements.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"installation.md","mtime":"2019-11-21T18:41:52.635Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T18:43:04.226Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Installation","level":"1.3","depth":1,"next":{"title":"Configuration","level":"1.4","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"previous":{"title":"Requirements and dependencies","level":"1.2","depth":1,"path":"requirements.md","ref":"requirements.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"installation.md","mtime":"2019-11-22T10:45:25.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T10:47:16.511Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
