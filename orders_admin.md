@@ -64,7 +64,13 @@ Additionally, the store admin will need to manually set the status to *Cancelled
 
 Please note that the WooYellowCube currently doesn't handle order returns automatically. If a return happens the
 affected order will remain unchanged, the payment refund and any other relevant steps need to be made manually by
-the store admin. The stock increase will be visible in the stock table the next day after the refund.
+the store admin. The stock increase will be visible in the stock table the next day after the return.
+
+Refer to the [WooCommerce refund documentation ](https://docs.woocommerce.com/document/woocommerce-refunds/).
+It is recommended to process returns with refunds based on items and choose "Restock refunded items".
+As a result the YellowCube stock list will report a difference until it reports the return the next day.
+Alternatively if you wait with manual refund handing until the day after the return, the YellowCube stock will first
+report a difference until you report the item as refunded.
 
 ### Order Completion
 
