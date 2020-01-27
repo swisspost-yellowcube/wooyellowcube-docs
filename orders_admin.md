@@ -23,7 +23,7 @@ The possible values in the YellowCube column are:
 - *Error*: A problem occured wile trying to process the order on the YellowCube side. Check the logs on the
   order edit page for more info.
 
-### Edit Order for details
+### <a id="orderdetail"></a> Edit Order for details
 
 Detailed information about YellowCube communication about each order is available at the bottom of the order edit page.
 
@@ -46,7 +46,7 @@ Any order submission will reserve its articles and deduct each articles stock co
 
 An order can stay stuck in status *Pending payment* or maybe *Failed* if a customer cancels on the payment page.
 Customers choosing manual payment methods in status *On hold* might change their mind about the order.
-See also the official [status definition](https://docs.woocommerce.com/document/managing-orders/).
+See also the official [status definition (WooCommerce documentation)](https://docs.woocommerce.com/document/managing-orders/).
 
 In order to free the reserved stock on cancellation, WooCommerce requires a store admin to put the order to status *Cancelled*.
 
