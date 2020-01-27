@@ -23,7 +23,7 @@ The possible values in the YellowCube column are:
 - *Error*: A problem occured wile trying to process the order on the YellowCube side. Check the logs on the
   order edit page for more info.
 
-### <a id="orderdetail"></a> Edit Order for details
+### Edit Order for details
 
 Detailed information about YellowCube communication about each order is available at the bottom of the order edit page.
 

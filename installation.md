@@ -1,6 +1,6 @@
 # Installation
 
-## <a name="get"></a>Getting the plugin
+## Getting the plugin
 
 Upon installing [Wordpress](https://codex.wordpress.org/Installing_WordPress) and [WooCommerce](https://docs.woocommerce.com/document/installing-uninstalling-woocommerce/)
 you'll proceed with WooYellowCube installation.
@@ -72,7 +72,7 @@ will become available in the administration menu.
 
 ![](/assets/plugin_enabled.png)
 
-## <a name="cron"></a>Cron for background processes
+## Cron for background processes
 
 The YellowCube plugin needs multiple recurring background processes to check for successful order processing and
 finally update the order with track & trace information.

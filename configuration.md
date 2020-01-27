@@ -1,6 +1,6 @@
 # Configuration
 
-## <a name="basic"></a>Basic configuration
+## Basic configuration
 
 You will find the YellowCube configuration section under the _WooYellowCube_ main menu item in the side administration toolbar.
 
@@ -51,7 +51,7 @@ Once you have configured shipping zones and added the desired shipping methods t
 
 The page lists all shipping methods \(grouped by zones\) and allows you to configure YellowCube for each of them separately. YellowCube can be enabled by selecting _Activated_ in the _Status_ dropdown for the relevant shipping zone/method.
 
-Orders still can be manually sent to YellowCube on each [order detail page](orders_admin.md#orderdetail) even if a matched zone is deactivated for YellowCube.
+Orders still can be manually sent to YellowCube on each [order detail page](orders_admin.md#edit-order-for-details) even if a matched zone is deactivated for YellowCube.
 
 The other two dropdowns \(_BasicShippingServices_ and _AdditionalShippingServices_\) allow you to select the YellowCube product that should be used.  You will find more detailed information about those in the YellowCube Interface Manual.
 
