@@ -40,7 +40,8 @@ Thus if choose YellowCube with WooCommerce, it is highly recommended to register
 
 ### Stock reservation on submission
 
-Any order submission will reserve its articles and deduct each articles stock counter immediately.
+Any order submission will reserve its articles and deduct each products stock counter immediately.
+As a result, the WooCommerce stock count is lower than the YellowCube stock count. See [stock management](stock.md#stock-count-math)
 
 ### Proper order cancellation
 
