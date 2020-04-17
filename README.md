@@ -19,8 +19,3 @@ If you need any support by the YellowCube team please contact us at www.yellowcu
   * [Order](orders_admin.md)
   * [Stock](stock.md)
   * [Activity Log](activity-log.md)
-
-# License
-
-// TODO define license
-
