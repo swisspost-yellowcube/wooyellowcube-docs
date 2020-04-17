@@ -14,6 +14,7 @@ If you need any support by the YellowCube team please contact us at www.yellowcu
 * [Configuration](configuration.md)
 * [Compatibility](compatibility.md)
 * [Update](update.md)
+* [Cron for background processes](cron.md)
 * [Store admin guide](admin_guide.md)
   * [Products](products_admin.md)
   * [Order](orders_admin.md)
